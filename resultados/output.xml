@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230816 17:43:28.893" rpa="false" schemaversion="4">
+<suite id="s1" name="Myshop Testes Gherkin Bdd" source="D:\Automação de testes com Framework - Básico\CursoUdemy\RobotFramework\WebTestting\myshop_testes_gherkin_bdd.robot">
+<test id="s1-t1" name="Caso de teste 02: Pesquisa de um Produto" line="19">
+<kw name="Abrir o navegador" library="myshop_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230816 17:43:30.271" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230816 17:43:30.270" endtime="20230816 17:43:34.414"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230816 17:43:34.414" endtime="20230816 17:43:34.762"/>
+</kw>
+<status status="PASS" starttime="20230816 17:43:30.264" endtime="20230816 17:43:34.762"/>
+</kw>
+<kw name="Dado que estou na home page da myshop" library="myshop_resources">
+<kw name="Acessar a home page do site Myshop" library="myshop_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230816 17:43:34.775" level="INFO">Opening url 'http://www.automationpractice.pl/index.php'</msg>
+<status status="PASS" starttime="20230816 17:43:34.773" endtime="20230816 17:43:39.545"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${LOGOTIPO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230816 17:43:39.545" endtime="20230816 17:43:39.649"/>
+</kw>
+<status status="PASS" starttime="20230816 17:43:34.772" endtime="20230816 17:43:39.650"/>
+</kw>
+<kw name="Verificar se o título da página fica &quot;My Shop&quot;" library="myshop_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230816 17:43:39.662" level="INFO">Page title is 'My Shop'.</msg>
+<status status="PASS" starttime="20230816 17:43:39.651" endtime="20230816 17:43:39.663"/>
+</kw>
+<status status="PASS" starttime="20230816 17:43:39.650" endtime="20230816 17:43:39.663"/>
+</kw>
+<status status="PASS" starttime="20230816 17:43:34.771" endtime="20230816 17:43:39.663"/>
+</kw>
+<kw name="Quando pesquisar pelo produto &quot;Blouse&quot;" library="myshop_resources">
+<kw name="Digitar o nome de produto &quot;Blouse&quot; no campo de pesquisa" library="myshop_resources" sourcename="Digitar o nome de produto &quot;${PRODUTO}&quot; no campo de pesquisa">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=search_query_top</arg>
+<arg>text=${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230816 17:43:39.668" level="INFO">Typing text 'Blouse' into text field 'search_query_top'.</msg>
+<status status="PASS" starttime="20230816 17:43:39.666" endtime="20230816 17:43:40.077"/>
+</kw>
+<status status="PASS" starttime="20230816 17:43:39.665" endtime="20230816 17:43:40.077"/>
+</kw>
+<kw name="Clicar no botão de pesquisa" library="myshop_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=submit_search</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230816 17:43:40.080" level="INFO">Clicking element 'submit_search'.</msg>
+<status status="PASS" starttime="20230816 17:43:40.078" endtime="20230816 17:43:40.244"/>
+</kw>
+<status status="PASS" starttime="20230816 17:43:40.077" endtime="20230816 17:43:40.244"/>
+</kw>
+<status status="PASS" starttime="20230816 17:43:39.664" endtime="20230816 17:43:40.244"/>
+</kw>
+<kw name="Então o título da página deve ficar &quot;Blouse&quot;" library="myshop_resources">
+<kw name="Verificar se o título da página fica &quot;Search - My Shop&quot;" library="myshop_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230816 17:43:41.408" level="INFO">Page title is 'Search - My Shop'.</msg>
+<status status="PASS" starttime="20230816 17:43:40.264" endtime="20230816 17:43:41.409"/>
+</kw>
+<status status="PASS" starttime="20230816 17:43:40.263" endtime="20230816 17:43:41.410"/>
+</kw>
+<status status="PASS" starttime="20230816 17:43:40.262" endtime="20230816 17:43:41.411"/>
+</kw>
+<kw name="E um produto da linha &quot;Blouse&quot; deve ser mostrado na página" library="myshop_resources">
+<kw name="Verificar o resultado da pesquisa se está listando o produto &quot;Blouse&quot;" library="myshop_resources" sourcename="Verificar o resultado da pesquisa se está listando o produto &quot;${PRODUTO}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//img[contains(@alt,'${PRODUTO}')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230816 17:43:41.431" endtime="20230816 17:43:41.563"/>
+</kw>
+<status status="PASS" starttime="20230816 17:43:41.430" endtime="20230816 17:43:41.563"/>
+</kw>
+<status status="PASS" starttime="20230816 17:43:41.429" endtime="20230816 17:43:41.563"/>
+</kw>
+<kw name="Fechar o navegador" library="myshop_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230816 17:43:41.795" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230816 17:43:41.568" endtime="20230816 17:43:41.795"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230816 17:43:41.796" endtime="20230816 17:43:44.368"/>
+</kw>
+<status status="PASS" starttime="20230816 17:43:41.568" endtime="20230816 17:43:44.368"/>
+</kw>
+<doc>Esse teste verifica a busca de um produto</doc>
+<tag>busca_produtos</tag>
+<tag>lista_busca</tag>
+<status status="PASS" starttime="20230816 17:43:30.261" endtime="20230816 17:43:44.369"/>
+</test>
+<doc>essa suite testa o site da Myshop.com.busca_produtos</doc>
+<status status="PASS" starttime="20230816 17:43:28.897" endtime="20230816 17:43:44.371"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">busca_produtos</stat>
+<stat pass="1" fail="0" skip="0">lista_busca</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Myshop Testes Gherkin Bdd">Myshop Testes Gherkin Bdd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
