@@ -93,3 +93,45 @@ O Robot irá jogar todos os arquivos de gerados dentro da nova pasta.
 robot -v BROWSER:firefox -i menus -d resultados myshop_testes.robot
 ```
 Em uma linha de comando unirmos os últimos comandos utilizados no noss terminal.
+
+Solução para erro de execução das suites de teste arquivo json
+
+![ERRO](./img/solução%20para%20o%20erro%20de%20lsp.png)
+
+Solução para o erro:
+```
+{
+
+    // Use IntelliSense to learn about possible attributes.
+
+    // Hover to view descriptions of existing attributes.
+
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+
+    "version": "0.2.0",
+
+    "configurations": [
+
+        {
+
+            "type": "robotframework-lsp",
+
+            "name": "Robot Framework: Launch template",
+
+            "request": "launch",
+
+            "env": {},
+
+            "args": [
+
+                "-d", "logs"
+
+            ]
+
+        }
+
+    ]
+
+}
+```
+Cole essa configuração para ajustar o erro!
