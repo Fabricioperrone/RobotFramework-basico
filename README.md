@@ -134,4 +134,4 @@ Solução para o erro:
 
 }
 ```
-Cole essa configuração para ajustar o erro!
+Cole essa configuração para ajustar o erro! Para funcionar feche e abra novamente o Vs Code.
